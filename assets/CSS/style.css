@@ -3,4 +3,10 @@
 body {
     background-color: #f7f7f7;
     font-family: 'Poppins', sans-serif;
+    padding: 36px;
 }
+
+.card-img-top {
+    height: 150px; /* Imposta l'altezza desiderata per l'immagine */
+    object-fit: cover; /* Assicura che l'immagine sia ridimensionata correttamente */
+  }
