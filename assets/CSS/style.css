@@ -1,12 +1,149 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 body {
-    background-color: #f7f7f7;
+    --color-black: #231f20;
+    --color-grey1: #fef9f1;
+    --color-grey2: #F7F1E9;
+    --color-grey3: #f3ece6;
+    --color-grey4: #e6ddcf;
+    background-color: #fef9f1;
     font-family: 'Poppins', sans-serif;
-    padding: 36px;
+    color: var(--color-black);
 }
 
-.card-img-top {
-    height: 150px; /* Imposta l'altezza desiderata per l'immagine */
-    object-fit: cover; /* Assicura che l'immagine sia ridimensionata correttamente */
+
+.card {
+    background-color: var(--color-grey3);
+    cursor: pointer;
+    transition: all .3s ease;
+    position: relative;
+}
+
+.card:hover {
+    background-color: var(--color-grey4);
+}
+
+.card img {
+    transition: all .3s ease;
+    object-fit: cover;
+    height: 250px;
+}
+
+.card:hover img {
+    transform: scale(1.03);
+}
+
+.card-body button {
+    background-color: var(--color-grey1);
+    width: fit-content;
+}
+
+.TextCut,
+.Title {
+    display: -webkit-box;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-align: left;
+    height: 3em;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.Title {
+    height: auto;
+    -webkit-line-clamp: 1;
+}
+
+/* LOADING BAR */
+.race-by {
+    --uib-size: 80px;
+    --uib-speed: 1.4s;
+    --uib-color: black;
+    --uib-line-weight: 5px;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--uib-line-weight);
+    width: var(--uib-size);
+    border-radius: calc(var(--uib-line-weight) / 2);
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+}
+
+.race-by::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--uib-color);
+    opacity: 0.1;
+}
+
+.race-by::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    border-radius: calc(var(--uib-line-weight) / 2);
+    animation: raceBy var(--uib-speed) ease-in-out infinite;
+    transform: translateX(-100%);
+    background-color: var(--uib-color);
+}
+
+@keyframes raceBy {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* LOADING CIRCLE */
+.ring {
+    --uib-size: 40px;
+    --uib-speed: 2s;
+    --uib-color: black;
+    
+    height: var(--uib-size);
+    width: var(--uib-size);
+    vertical-align: middle;
+    transform-origin: center;
+    animation: rotate var(--uib-speed) linear infinite;
   }
+  
+  .ring circle {
+    fill: none;
+    stroke: var(--uib-color);
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    animation: stretch calc(var(--uib-speed) * 0.75) ease-in-out infinite;
+  }
+  
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes stretch {
+    0% {
+      stroke-dasharray: 1, 200;
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dasharray: 90, 200;
+      stroke-dashoffset: -35px;
+    }
+    100% {
+      stroke-dashoffset: -124px;
+    }
+  }
+  
