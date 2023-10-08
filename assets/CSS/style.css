@@ -2,19 +2,33 @@
 
 body {
     --color-black: #231f20;
+    --color-white: #fff;
     --color-grey1: #fef9f1;
     --color-grey2: #F7F1E9;
     --color-grey3: #f3ece6;
     --color-grey4: #e6ddcf;
+    --color-grey5: #e3d4d0;
     background-color: #fef9f1;
     font-family: 'Poppins', sans-serif;
     color: var(--color-black);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 a{
     text-decoration: none !important;
+    color: var(--color-black) !important;
 }
 
+.navbar-toggler{
+    border: none;
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
+    color: #fff;
+}
 
 .card {
     background-color: var(--color-grey3);
@@ -58,6 +72,22 @@ a{
 .Title {
     height: auto;
     -webkit-line-clamp: 1;
+}
+
+footer{
+    margin-top: auto;
+}
+
+footer ul li{
+    font-size: 12px;
+    color: var(--color-grey1);
+    margin-right: 16px;
+    margin-bottom: 8px;
+}
+
+.footer-text{
+    color: var(--color-black);
+    font-size: 11px;
 }
 
 /* LOADING BAR */

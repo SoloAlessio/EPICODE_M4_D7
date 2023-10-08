@@ -11,7 +11,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
     <!-- LOCAL CSS -->
     <link rel="stylesheet" href="assets/CSS/style.css">
@@ -42,7 +41,7 @@
             </div>
         </nav>
     </div>
-    
+
     <div class="container"> <!-- FORM ADD PRODUCT -->
         <div class="row">
             <form onsubmit="createProduct(event)">
@@ -53,7 +52,8 @@
                             <input required class="mb-3 form-control" placeholder="name" type="text" id="name">
                         </div>
                         <div class="col-12">
-                            <input required class="mb-3 form-control" placeholder="description" type="text" id="description">
+                            <input required class="mb-3 form-control" placeholder="description" type="text"
+                                id="description">
                         </div>
                         <div class="col-12">
                             <input required class="mb-3 form-control" placeholder="brand" type="text" id="brand">
@@ -62,7 +62,8 @@
                             <input required class="mb-3 form-control" placeholder="Image URL" type="text" id="imageURL">
                         </div>
                         <div class="col-12">
-                            <input required class="mb-3 form-control" placeholder="price" step="any" type="number" id="price">
+                            <input required class="mb-3 form-control" placeholder="price" step="any" type="number"
+                                id="price">
                         </div>
                         <div class="col-12" id="loading-bar-box">
                             <button class="btn btn-primary w-100">CREA</button>
@@ -73,10 +74,37 @@
         </div>
     </div>
 
+    <footer>
+        <div class="container">
+            <div class="row">
+                <!-- Colonna 1 -->
+                <div class="col-12 flex-wrap">
+                    <ul class="list-unstyled d-flex flex-wrap g-4">
+                        <li><a href="#">Aziende del gruppo eBay</a></li>
+                        <li><a href="#">Bacheca Annunci</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Spazio Sicurezza</a></li>
+                        <li><a href="#">Come Vendere</a></li>
+                        <li><a href="#">Spazio Venditori</a></li>
+                        <li><a href="#">Regole eBay</a></li>
+                        <li><a href="#">Traduzione</a></li>
+                        <li><a href="#">Pubblicità eBay</a></li>
+                        <li><a href="#">Affiliazione</a></li>
+                        <li><a href="#">Aiuto e Contatti</a></li>
+                        <li><a href="#">Mappa del sito</a></li>
+                    </ul>
+                    <p class="footer-text">Copyright © 1995-2023 eBay Inc. Tutti i diritti riservati. Accessibilità,
+                        Accordo per gli utenti,
+                        Privacy, Condizioni di utilizzo dei servizi di pagamento, Cookie e AdChoice</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-    
+
     <script src="assets/JS/MainScript.js"></script>
 </body>
 
