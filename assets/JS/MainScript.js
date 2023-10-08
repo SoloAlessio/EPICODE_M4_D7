@@ -13,6 +13,7 @@ async function getData() {
         }
     })
     const data = await response.json()
+    console.log(data);
 
     return data
 }
@@ -22,7 +23,7 @@ async function createProduct(event) {
     event.preventDefault()
 
     event.target.querySelector("#loading-bar-box").innerHTML = `
-    <div class="col-12 d-flex justify-content-center align-items-center">
+    <div class="col-12 mt-4 d-flex justify-content-center align-items-center">
         <div class="race-by"></div>
     </div>
 `
@@ -59,7 +60,7 @@ async function createProduct(event) {
 async function displayProduct(data) {
     row.innerHTML = data.map(({ name, description, brand, price, imageUrl, _id }) => /*html*/`
     <div class="col-12 col-md-6 col-lg-4 col-xl-3" id="_${_id}">
-        <a href="Prodotto.html">
+        <a href="Prodotto.html?id=${_id}">
             <div class="card p-3 h-100 border-0">
                <img class="card-img-top rounded shadow" src="${imageUrl}">
                <div class="card-body p-0 mt-4 d-flex flex-column justify-content-between">

@@ -11,6 +11,10 @@ body {
     color: var(--color-black);
 }
 
+a{
+    text-decoration: none !important;
+}
+
 
 .card {
     background-color: var(--color-grey3);
