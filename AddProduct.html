@@ -17,10 +17,10 @@
 </head>
 
 <body>
-    <div class="container mb-4"> <!-- NAVBAR -->
+    <div class="container-fluid sticky-top" style="background-color: var(--color-grey1);"> <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
                     <img src="assets/IMGs/logo.png" height="32">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -42,32 +42,37 @@
         </nav>
     </div>
 
-    <div class="container"> <!-- FORM ADD PRODUCT -->
+    <div class="container mt-5"> <!-- FORM ADD PRODUCT -->
         <div class="row">
             <form onsubmit="createProduct(event)">
                 <h3 class="mb-4">Aggiungi Prodotto</h3>
                 <div class="row g-4">
                     <div class="col-12 col-lg-6">
                         <div class="col-12">
-                            <input required class="mb-3 form-control" placeholder="name" type="text" id="name">
+                            <input required class="mb-3 form-control border-0 shadow-sm" placeholder="name" type="text" id="name">
                         </div>
                         <div class="col-12">
-                            <input required class="mb-3 form-control" placeholder="description" type="text"
+                            <input required class="mb-3 form-control border-0 shadow-sm" placeholder="description" type="text"
                                 id="description">
                         </div>
                         <div class="col-12">
-                            <input required class="mb-3 form-control" placeholder="brand" type="text" id="brand">
+                            <input required class="mb-3 form-control border-0 shadow-sm" placeholder="brand" type="text" id="brand">
                         </div>
                         <div class="col-12">
-                            <input required class="mb-3 form-control" placeholder="Image URL" type="text" id="imageURL">
+                            <input required class="mb-3 form-control border-0 shadow-sm" placeholder="Image URL" type="text" id="imageURL">
                         </div>
                         <div class="col-12">
-                            <input required class="mb-3 form-control" placeholder="price" step="any" type="number"
+                            <input required class="mb-3 form-control border-0 shadow-sm" placeholder="price" step="any" type="number"
                                 id="price">
                         </div>
                         <div class="col-12" id="loading-bar-box">
-                            <button class="btn btn-primary w-100">CREA</button>
+                            <button class="btn btn-primary w-100 border-0 py-2" style="background-color: var(--color-grey4); color: var(--color-black);">
+                                <i class="bi bi-plus-circle me-2"></i>Aggiungi
+                            </button>
                         </div>
+                    </div>
+                    <div class="col-lg-6 d-none d-lg-flex justify-content-center">
+                        <img src="assets/IMGs/Humaaans - Wireframe.png" class="img-fluid" alt="">
                     </div>
                 </div>
             </form>

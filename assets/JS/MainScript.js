@@ -1,4 +1,3 @@
-const row = document.querySelector(".row.main")
 const name = document.querySelector("#name")
 const description = document.querySelector("#description")
 const brand = document.querySelector("#brand")
@@ -13,7 +12,6 @@ async function getData() {
         }
     })
     const data = await response.json()
-    console.log(data);
 
     return data
 }
@@ -58,25 +56,27 @@ async function createProduct(event) {
 }
 
 async function displayProduct(data) {
+    const row = document.querySelector(".row.products")
+
     row.innerHTML = data.map(({ name, description, brand, price, imageUrl, _id }) => /*html*/`
     <div class="col-12 col-md-6 col-lg-4 col-xl-3" id="_${_id}">
-        <a href="Prodotto.html?id=${_id}">
             <div class="card p-3 h-100 border-0">
-               <img class="card-img-top rounded shadow" src="${imageUrl}">
+                <a href="Prodotto.html?id=${_id}">
+                    <img class="card-img-top rounded shadow" src="${imageUrl}">
+                </a>
                <div class="card-body p-0 mt-4 d-flex flex-column justify-content-between">
-                    <div>
+                    <a href="Prodotto.html?id=${_id}">
                         <h5 class="card-title TextCut Title">${name}</h5>
                         <h6 class="card-subtitle mb-2 text-muted pb-2">${brand}</h6>
                         <p class="card-text text-muted TextCut">${description}</p>
                         <p class="card-text text-muted">${formatCurrency(price)}</p>
-                    </div>
+                    </a>
                     <div class="d-flex">
                         <button class="btn mt-4 me-2" onclick="deleteProduct('${_id}')"><i class="bi bi-trash"></i></button>
                         <button class="btn mt-4" onclick="handleEdit('${_id}')"><i class="bi bi-pencil-square"></i></button>
                     </div>
                 </div>
             </div>
-        </a>
     </div>
     `).join('')
 }
@@ -88,7 +88,7 @@ async function deleteProduct(id) {
 
     document.querySelector(`#_${id}`).innerHTML = `
     <div class="col-12 col-md-6 col-lg-4 col-xl-3">
-        <div class="card p-3 h-100 border-0">
+        <div class="card p-3 h-100 border-0 bg-transparent">
             <svg
                 class="ring"
                 viewBox="25 25 50 50"
@@ -149,10 +149,14 @@ async function handleEdit(id) {
                         <div class="col-12">
                         <div class="row" id="spinner">
                             <div class="col-6">
-                                <button class="btn btn-primary w-100" type="submit">MODIFICA</button>
+                                <button class="btn btn-primary border-0 w-100 rounded py-2" style="background-color: var(--color-grey4); color: var(--color-black);" type="submit">
+                                    <i class="bi bi-check-circle text-success"> Annulla</i>
+                                </button>
                             </div>
                             <div class="col-6">
-                                <button class="btn btn-primary w-100" onclick="handleEditCancel()">ANNULLA</button>
+                                <button class="btn btn-primary border-0 w-100 rounded py-2" style="background-color: var(--color-grey4); color: var(--color-black);" onclick="handleEditCancel()">
+                                    <i class="bi bi-x-circle text-danger"> Conferma</i>
+                                </button>
                             </div>
                         </div>
                         </div>

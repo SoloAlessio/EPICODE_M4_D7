@@ -21,6 +21,14 @@ a{
     color: var(--color-black) !important;
 }
 
+button{
+    transition: all .3s ease !important;
+}
+
+button:hover{
+    filter: brightness(.9) contrast(1.2); 
+}
+
 .navbar-toggler{
     border: none;
 }
@@ -72,6 +80,11 @@ a{
 .Title {
     height: auto;
     -webkit-line-clamp: 1;
+}
+
+.Description {
+    height: auto;
+    -webkit-line-clamp: 6;
 }
 
 footer{
