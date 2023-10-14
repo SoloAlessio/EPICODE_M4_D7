@@ -150,12 +150,12 @@ async function handleEdit(id) {
                         <div class="row" id="spinner">
                             <div class="col-6">
                                 <button class="btn btn-primary border-0 w-100 rounded py-2" style="background-color: var(--color-grey4); color: var(--color-black);" type="submit">
-                                    <i class="bi bi-check-circle text-success"> Annulla</i>
+                                    <i class="bi bi-check-circle text-success"> Conferma</i>
                                 </button>
                             </div>
                             <div class="col-6">
                                 <button class="btn btn-primary border-0 w-100 rounded py-2" style="background-color: var(--color-grey4); color: var(--color-black);" onclick="handleEditCancel()">
-                                    <i class="bi bi-x-circle text-danger"> Conferma</i>
+                                    <i class="bi bi-x-circle text-danger"> Annulla</i>
                                 </button>
                             </div>
                         </div>
