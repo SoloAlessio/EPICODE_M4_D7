@@ -8,7 +8,7 @@ const URL = "https://striveschool-api.herokuapp.com/api/product/"
 async function getData() {
     const response = await fetch(URL, {
         headers: {
-            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTFlZWVhYWM3Mjg4NzAwMTg4N2ZlZTUiLCJpYXQiOjE2OTY1MjU5OTQsImV4cCI6MTY5NzczNTU5NH0.FSY44IPHuzuM4bbnohDG3FNrljb5NRm0_36qYmiGvBc"
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTM1NzIyMWEyN2U4YjAwMTljOTc3NDciLCJpYXQiOjE2OTgwMDE0NDEsImV4cCI6MTY5OTIxMTA0MX0.vwKgrBE0CCcrb-a1bdVqMerc_9nysVUawogYjkt-pY4"
         }
     })
     const data = await response.json()
@@ -30,7 +30,7 @@ async function createProduct(event) {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTFlZWVhYWM3Mjg4NzAwMTg4N2ZlZTUiLCJpYXQiOjE2OTY1MjU5OTQsImV4cCI6MTY5NzczNTU5NH0.FSY44IPHuzuM4bbnohDG3FNrljb5NRm0_36qYmiGvBc"
+            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTM1NzIyMWEyN2U4YjAwMTljOTc3NDciLCJpYXQiOjE2OTgwMDE0NDEsImV4cCI6MTY5OTIxMTA0MX0.vwKgrBE0CCcrb-a1bdVqMerc_9nysVUawogYjkt-pY4"
         },
         body: JSON.stringify({
             name: name.value,
@@ -103,7 +103,7 @@ async function deleteProduct(id) {
     const response = await fetch(URL + id, {
         method: "DELETE",
         headers: {
-            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTFlZWVhYWM3Mjg4NzAwMTg4N2ZlZTUiLCJpYXQiOjE2OTY1MjU5OTQsImV4cCI6MTY5NzczNTU5NH0.FSY44IPHuzuM4bbnohDG3FNrljb5NRm0_36qYmiGvBc"
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTM1NzIyMWEyN2U4YjAwMTljOTc3NDciLCJpYXQiOjE2OTgwMDE0NDEsImV4cCI6MTY5OTIxMTA0MX0.vwKgrBE0CCcrb-a1bdVqMerc_9nysVUawogYjkt-pY4"
         }
     })
 
@@ -118,7 +118,7 @@ async function deleteProduct(id) {
 async function handleEdit(id) {
     const agendaEvent = await fetch(URL + id, {
         headers: {
-            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTFlZWVhYWM3Mjg4NzAwMTg4N2ZlZTUiLCJpYXQiOjE2OTY1MjU5OTQsImV4cCI6MTY5NzczNTU5NH0.FSY44IPHuzuM4bbnohDG3FNrljb5NRm0_36qYmiGvBc"
+            Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTM1NzIyMWEyN2U4YjAwMTljOTc3NDciLCJpYXQiOjE2OTgwMDE0NDEsImV4cCI6MTY5OTIxMTA0MX0.vwKgrBE0CCcrb-a1bdVqMerc_9nysVUawogYjkt-pY4"
         }
     })
     const agendaEventJson = await agendaEvent.json()
@@ -198,7 +198,7 @@ async function handleEditSubmit(e, id) {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
-                Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTFlZWVhYWM3Mjg4NzAwMTg4N2ZlZTUiLCJpYXQiOjE2OTY1MjU5OTQsImV4cCI6MTY5NzczNTU5NH0.FSY44IPHuzuM4bbnohDG3FNrljb5NRm0_36qYmiGvBc"
+                Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTM1NzIyMWEyN2U4YjAwMTljOTc3NDciLCJpYXQiOjE2OTgwMDE0NDEsImV4cCI6MTY5OTIxMTA0MX0.vwKgrBE0CCcrb-a1bdVqMerc_9nysVUawogYjkt-pY4"
             },
             body: JSON.stringify(updatedEvent)
         })
